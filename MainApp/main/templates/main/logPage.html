@@ -1,0 +1,30 @@
+{% extends 'main/index.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="content">    
+            <form method="post" action="/register/">
+                {% csrf_token %}
+                <div class="flex_row">
+                    <label for="log"> Login: </label>
+                    <input id="log" name="log" type="text" placeholder="Input your login here">
+                </div>
+                
+                <div class="flex_row">
+                    <label for="psw"> Password: </label>
+                    <input id="psw" name="psw" type="password" placeholder="Input your password here">
+                </div>
+                
+                <div class="flex_row">
+                    <button type="submit">Login</button>
+                </div>
+
+                <div class="flex_row">
+                    <a href="/register/">Register here</a>
+                </div>    
+            </form>
+        </div>
+    </div>
+{% endblock %}
